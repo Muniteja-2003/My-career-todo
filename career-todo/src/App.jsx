@@ -231,7 +231,6 @@ export default function App() {
                 <button className="primary" type="button" disabled={task.done || task.remaining === 0} onClick={() => updateTask(task.id, { running: !task.running })}>{task.running ? 'Ⅱ Pause' : '▶ Start timer'}</button>
                 <button type="button" onClick={() => resetTimer(task)}>↻ Reset</button>
               </div>
-
               <div className="subtasks">
                 <div className="subtask-title"><strong>Subtasks</strong><span>{doneSubs}/{task.subtasks.length} completed</span></div>
                 <div className="mini-progress"><div style={{ width: `${subProgress}%` }} /></div>
